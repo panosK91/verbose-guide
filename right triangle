@@ -1,0 +1,31 @@
+import javax.swing.*;
+
+public class abc
+{
+    public static void main(String[] args)
+    {
+        double a, b, bc, c;
+        String aStr, bStr, cStr, output; //declares our variables
+
+        aStr = JOptionPane.showInputDialog("Enter a length of the hypotenuse: "); //prompts user
+        a = Double.parseDouble(aStr); //sets a equal to the value input
+
+        bStr = JOptionPane.showInputDialog("Enter a length of another side: "); //prompts user
+        b = Double.parseDouble(bStr); //sets b equal to the value input
+
+        cStr = JOptionPane.showInputDialog("Enter a length of the last side: "); //prompts user
+        c = Double.parseDouble(cStr); //sets c equal to the value input
+
+        bc = (b * b) + (c * c); //calculates the length of the two shorter sides squared
+
+        if (bc == a * a) //conditional statement
+            output = "This IS a right triangle."; //output to user
+
+        else //if conditional is not satisfied
+
+            output = "This is NOT a right triangle."; //output
+
+        JOptionPane.showMessageDialog(null, output, "Calculation", JOptionPane.INFORMATION_MESSAGE); //displays output in GUI window
+
+    }
+}
